@@ -30,7 +30,7 @@ class ResourceManager
     ResourceManager& operator=(const ResourceManager& resource2)
     {
         //std::cout << "OPERATOR KOPIOWANIA"<<std::endl;    
-        delete resource;
+        delete this->resource;
         resource = new Resource{};
         resource = resource2.resource;
         return *this;
