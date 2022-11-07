@@ -10,26 +10,26 @@ class ResourceManager
     public:
     ResourceManager()       
     {   
-        std::cout << "KONSTRUKTOR"<<std::endl;
+        //std::cout << "KONSTRUKTOR"<<std::endl;
         resource = new Resource{};
     }
     ~ResourceManager() 
     {    
-        std::cout << "DESTRUKTOR"<<std::endl;
+        //std::cout << "DESTRUKTOR"<<std::endl;
         delete resource;
     }
 
 
     ResourceManager(const ResourceManager& resource1)   
     {
-        std::cout << "KONSTRUKTOR KOPIUJACY"<<std::endl;
+        //std::cout << "KONSTRUKTOR KOPIUJACY"<<std::endl;
         resource = new Resource{};
         *resource = *resource1.resource;
     }
 
     ResourceManager& operator=(const ResourceManager& resource2)
     {
-        std::cout << "OPERATOR KOPIOWANIA"<<std::endl;    
+        //std::cout << "OPERATOR KOPIOWANIA"<<std::endl;    
         delete this->resource;
         resource = new Resource{};
         *resource = *resource2.resource;
