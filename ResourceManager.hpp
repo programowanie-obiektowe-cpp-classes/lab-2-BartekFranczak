@@ -24,15 +24,15 @@ class ResourceManager
     {
         //std::cout << "KONSTRUKTOR KOPIUJACY"<<std::endl;
         resource = new Resource{};
-        *resource = *resource1.resource;
+        resource = resource1.resource;
     }
 
     ResourceManager& operator=(const ResourceManager& resource2)
     {
         //std::cout << "OPERATOR KOPIOWANIA"<<std::endl;    
-        delete this->resource;
+        delete resource;
         resource = new Resource{};
-        *resource = *resource2.resource;
+        resource = resource2.resource;
         return *this;
     }
     double get() 
